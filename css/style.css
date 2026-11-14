@@ -1,0 +1,139 @@
+/* =====================================================
+   Muslim Boutique : feuille de style
+   Palette : prune (#4a2c4f), doré rosé (#c58f5f), crème (#faf6f2)
+   ===================================================== */
+
+/* ===== 1. Base ===== */
+body {
+    background-color: #faf6f2;
+    color: #2b2b2b;
+  }
+  
+  h2 {
+    color: #4a2c4f;
+  }
+  
+  /* Les liens du menu ne cachent pas les titres */
+  section[id],
+  footer[id] {
+    scroll-margin-top: 70px;
+  }
+  
+  /* ===== 2. En-tête ===== */
+  .navbar {
+    background-color: #4a2c4f;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ===== 3. Bannière d'accueil ===== */
+  .banniere {
+    min-height: 85vh;
+    background-color: #2d1a31;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banniere.jfif");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .banniere h1 {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ===== 4. Boutons ===== */
+  .btn-accent {
+    background-color: #c58f5f;
+    border-color: #c58f5f;
+    color: #fff;
+  }
+  
+  .btn-accent:hover {
+    background-color: #a8744a;
+    border-color: #a8744a;
+    color: #fff;
+  }
+  
+  /* ===== 5. Section produits ===== */
+  .sous-titre {
+    color: #6b5b6e;
+  }
+  
+  .card {
+    border: 0;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Effet au survol : la carte se soulève légèrement */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(74, 44, 79, 0.18) !important;
+  }
+  
+  .card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .prix {
+    color: #8a5a2b;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  
+  /* ===== 6. Pied de page ===== */
+  .footer {
+    background-color: #4a2c4f;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+  
+  .footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  /* =====================================================
+     7. REQUÊTES MÉDIA : adaptation aux tailles d'écran
+     ===================================================== */
+  
+  /* Grand écran (1200px et plus) : titre plus grand */
+  @media (min-width: 1200px) {
+    .banniere h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  /* Tablette et en dessous (992px et moins) :
+     bannière moins haute, photos moins hautes */
+  @media (max-width: 991.98px) {
+    .banniere {
+      min-height: 70vh;
+    }
+  
+    .card-img-top {
+      aspect-ratio: 4 / 3;
+    }
+  }
+  
+  /* Téléphone (575px et moins) :
+     titre plus petit et pied de page centré */
+  @media (max-width: 575.98px) {
+    .banniere h1 {
+      font-size: 2rem;
+    }
+  
+    .banniere .lead {
+      font-size: 1rem;
+    }
+  
+    .footer {
+      text-align: center;
+    }
+  }
